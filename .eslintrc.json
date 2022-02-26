@@ -8,6 +8,7 @@
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
         "airbnb",
+        "airbnb-typescript",
         "prettier",
         "plugin:react/jsx-runtime"
     ],
@@ -17,7 +18,8 @@
             "jsx": true
         },
         "ecmaVersion": 13,
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": "./tsconfig.json"
     },
     "plugins": [
         "react",
@@ -27,7 +29,28 @@
     "rules": {
         "no-unused-vars":"warn",
         "prettier/prettier": "error",
-        "react/jsx-filename-extension": [1, { "allow": "as-needed" }]
-            
-    }
+        "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+        "no-restricted-imports": ["error", {
+            "patterns": [".*"]
+          }],
+          "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+              "js": "never",
+              "jsx": "never",
+              "ts": "never",
+              "tsx": "never"
+            }
+         ]         
+    },
+    "settings": {
+      "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
+      },
+        "import/resolver": {
+          "typescript": {}
+        }
+      }
 }
