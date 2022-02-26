@@ -10,7 +10,7 @@ import iconsArray from 'utils/icons';
 
 function App() {
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid grid-cols-4 gap-4 ml-20 mr-20 ">
       <Sidebar />
       <InputHandler>
         <Text />
