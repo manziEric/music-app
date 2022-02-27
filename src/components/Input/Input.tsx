@@ -3,7 +3,7 @@ interface ComponentProps {
 }
 
 function Input({ name }: ComponentProps): JSX.Element {
-  return <input type="checkbox" name={name} id="" />;
+  return <input type="checkbox" name={name} className="m-1" />;
 }
 
 export default Input;

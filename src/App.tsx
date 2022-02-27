@@ -7,10 +7,11 @@ import Text from 'components/Text/Text';
 import iconsArray from 'utils/icons';
 
 // TODO:[] Use the colors from figma
+// TODO:[] Use flex not grid
 
 function App() {
   return (
-    <div className="grid grid-cols-4 gap-4 ml-20 mr-20 ">
+    <div className="flex flex-row items-center justify-center h-screen  mx-20">
       <Sidebar />
       <InputHandler>
         <Text />

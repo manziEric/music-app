@@ -1,7 +1,7 @@
 function Text() {
   return (
-    <div>
-      <h6>Formats</h6>
+    <div className="basis-2/5">
+      <h2 className="font-bold">Formats</h2>
       <p>
         Select all the formats this product and tracklisting will be released
         on.

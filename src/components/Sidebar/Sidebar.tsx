@@ -1,6 +1,6 @@
 function Sidebar() {
   return (
-    <div className="p-6 w-full min-h-60  mx-auto bg-gray-400 rounded-xl shadow-md flex justify-center col-span-1 items-center space-x-4">
+    <div className="p-6 basis-1/4 w-full h-40  mr-20 bg-gray-400 rounded-xl shadow-md flex justify-center col-span-1 items-center">
       Sidebar
     </div>
   );
