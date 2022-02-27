@@ -1,11 +1,13 @@
-function Text() {
+interface ComponentProps {
+  title: string;
+  text: string;
+}
+
+function Text({ title, text }: ComponentProps) {
   return (
     <div className="basis-2/5">
-      <h2 className="font-bold">Formats</h2>
-      <p>
-        Select all the formats this product and tracklisting will be released
-        on.
-      </p>
+      <h2 className="font-bold">{title}</h2>
+      <p>{text}</p>
     </div>
   );
 }

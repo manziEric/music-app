@@ -13,7 +13,11 @@ function App() {
     <div className="flex flex-row items-center justify-center h-screen  mx-20">
       <Sidebar />
       <InputHandler>
-        <Text />
+        <Text
+          title="Formats"
+          text=" Select all the formats this product and tracklisting will be released
+        on."
+        />
         {iconsArray.map(({ id, icon, text }) => (
           <ButtonContainer key={id}>
             <Logo logo={icon} altText="music logo" />
