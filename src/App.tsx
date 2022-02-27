@@ -6,8 +6,7 @@ import Sidebar from 'components/Sidebar/Sidebar';
 import Text from 'components/Text/Text';
 import iconsArray from 'utils/icons';
 
-// TODO:[] Use the colors from figma
-// TODO:[] Use flex not grid
+// TODO:[] Look If all TODO'S are done in the TODO.md
 
 function App() {
   return (
