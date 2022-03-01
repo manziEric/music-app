@@ -6,7 +6,7 @@ interface ComponentsProps {
 
 function ButtonContainer({ children }: ComponentsProps) {
   return (
-    <div className="p-4 border border-stone-400 rounded-md flex flex-col basis-1/5 items-center justify-center cursor-pointer">
+    <div className="p-4 m-2 border min-w-40 h-40 border-stone-400 rounded-md grid place-items-center  cursor-pointer">
       {children}
     </div>
   );

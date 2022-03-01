@@ -10,22 +10,26 @@ import iconsArray from 'utils/icons';
 
 function App() {
   return (
-    <div className="flex flex-row items-center justify-center h-screen  mx-20">
-      <Sidebar />
-      <InputHandler>
-        <Text
-          title="Formats"
-          text=" Select all the formats this product and tracklisting will be released
+    <div className="grid h-screen place-items-center">
+      <div className="md:grid md:grid-cols-4 md:gap-4 mx-10">
+        <Sidebar />
+        <InputHandler>
+          <Text
+            title="Formats"
+            text=" Select all the formats this product and tracklisting will be released
         on."
-        />
-        {iconsArray.map(({ id, icon, text }) => (
-          <ButtonContainer key={id}>
-            <Logo logo={icon} altText="music logo" />
-            <h6>{text}</h6>
-            <Input name="button" />
-          </ButtonContainer>
-        ))}
-      </InputHandler>
+          />
+          <div className="grid grid-cols-3 col-span-3 items-center ">
+            {iconsArray.map(({ id, icon, text }) => (
+              <ButtonContainer key={id}>
+                <Logo logo={icon} altText="music logo" />
+                <h6>{text}</h6>
+                <Input name="button" />
+              </ButtonContainer>
+            ))}
+          </div>
+        </InputHandler>
+      </div>
     </div>
   );
 }

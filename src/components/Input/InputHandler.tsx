@@ -9,7 +9,11 @@ interface ComponentsProps {
 function InputHandler({ children }: ComponentsProps): JSX.Element {
   return (
     <InputHandlerContext.Provider value={null}>
-      <div className="p-6 basis-3/4  h-40  mx-auto bg-white rounded-xl shadow-md md:flex flex-row items-center justify-center space-x-4">
+      <div
+        className="p-6 h-auto bg-white rounded-xl shadow-md grid grid-cols-1 md:grid md:grid-cols-1 md:col-span-3
+        lg:grid lg:grid-cols-4 lg:col-span-3 items-center
+      "
+      >
         {children}
       </div>
     </InputHandlerContext.Provider>
