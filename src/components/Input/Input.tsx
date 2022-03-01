@@ -1,9 +1,10 @@
 interface ComponentProps {
+  id: string;
   name: string;
 }
 
-function Input({ name }: ComponentProps): JSX.Element {
-  return <input type="checkbox" name={name} className="m-1" />;
+function Input({ id, name }: ComponentProps): JSX.Element {
+  return <input type="checkbox" id={id} name={name} className="m-1" />;
 }
 
 export default Input;

@@ -10,7 +10,7 @@ import iconsArray from 'utils/icons';
 
 function App() {
   return (
-    <div className="grid h-screen place-items-center">
+    <div className="grid h-screen place-items-center bg-gray-100">
       <div className="md:grid md:grid-cols-4 md:gap-4 mx-10">
         <Sidebar />
         <InputHandler>
@@ -21,10 +21,10 @@ function App() {
           />
           <div className="grid grid-cols-3 col-span-3 items-center ">
             {iconsArray.map(({ id, icon, text }) => (
-              <ButtonContainer key={id}>
+              <ButtonContainer key={id} id={`checkbox${id}`}>
                 <Logo logo={icon} altText="music logo" />
                 <h6>{text}</h6>
-                <Input name="button" />
+                <Input id={`checkbox${id}`} name="button" />
               </ButtonContainer>
             ))}
           </div>
