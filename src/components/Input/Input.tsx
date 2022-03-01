@@ -4,7 +4,7 @@ interface ComponentProps {
 }
 
 function Input({ id, name }: ComponentProps): JSX.Element {
-  return <input type="checkbox" id={id} name={name} className="m-1" />;
+  return <input type="checkbox" id={id} name={name} />;
 }
 
 export default Input;

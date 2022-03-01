@@ -1,29 +1,28 @@
 import { ReactNode } from 'react';
+import useClickHandeler from 'components/Input/useClickHandeler';
 
 interface ComponentsProps {
   children: ReactNode;
   id: string;
 }
 
-type HandleButtonClick = (e: any) => void;
-
 function ButtonContainer({ id, children }: ComponentsProps): JSX.Element {
-  const handleButtonClick: HandleButtonClick = (e) => {
-    console.log(e.target.checked);
-  };
+  const [handleButtonClick, handleKeyPress] = useClickHandeler();
 
-  const handleKeyPress: HandleButtonClick = () => {
-    // console.log(e);
-  };
   return (
     <div
-      className="p-4 m-2 border min-w-40 h-40 border-stone-400 rounded-md grid place-items-center cursor-pointer"
       onClick={handleButtonClick}
       onKeyPress={handleKeyPress}
+      onLoad={(e) => handleButtonClick(e)}
       role="button"
       tabIndex={0}
     >
-      <label htmlFor={id}>{children}</label>
+      <label
+        className="m-2 border h-36 border-stone-400 rounded-md grid place-items-center cursor-pointer"
+        htmlFor={id}
+      >
+        {children}
+      </label>
     </div>
   );
 }
