@@ -3,7 +3,7 @@ import useClickHandeler from 'components/Input/useClickHandeler';
 
 interface ComponentsProps {
   children: ReactNode;
-  id: string;
+  id: number;
 }
 
 function ButtonContainer({ id, children }: ComponentsProps): JSX.Element {
@@ -11,15 +11,14 @@ function ButtonContainer({ id, children }: ComponentsProps): JSX.Element {
 
   return (
     <div
-      onClick={handleButtonClick}
+      onChange={handleButtonClick}
       onKeyPress={handleKeyPress}
-      onLoad={(e) => handleButtonClick(e)}
       role="button"
       tabIndex={0}
     >
       <label
         className="m-2 border h-36 border-stone-400 rounded-md grid place-items-center cursor-pointer"
-        htmlFor={id}
+        htmlFor={id.toString()}
       >
         {children}
       </label>

@@ -1,6 +1,6 @@
 import { createContext, ReactNode } from 'react';
 
-export const InputHandlerContext = createContext<any>(null);
+export const InputHandlerContext = createContext<any>({});
 
 interface ComponentsProps {
   children: ReactNode;

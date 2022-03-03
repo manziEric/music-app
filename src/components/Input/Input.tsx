@@ -1,10 +1,15 @@
+import useClickHandeler from 'components/Input/useClickHandeler';
+
 interface ComponentProps {
-  id: string;
+  id: number;
   name: string;
 }
 
 function Input({ id, name }: ComponentProps): JSX.Element {
-  return <input type="checkbox" id={id} name={name} />;
+  const [map] = useClickHandeler();
+  return (
+    <input type="checkbox" checked={map[id]} id={id.toString()} name={name} />
+  );
 }
 
 export default Input;
