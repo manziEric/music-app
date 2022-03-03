@@ -1,22 +1,29 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { createContext, ReactNode, useReducer } from 'react';
+import { createContext, Dispatch, useReducer } from 'react';
 import inputReducer from 'context/inputReducer';
+import { ComponentsProps } from 'utils/types';
 
-interface ComponentsProps {
-  children: ReactNode;
-}
-
-export const GlobalContext = createContext<any>({});
+type InitialStateType = {
+  errorMessage: boolean;
+};
 
 const initialState = {
   errorMessage: true,
 };
 
+export const GlobalContext = createContext<{
+  state: InitialStateType;
+  dispatch: Dispatch<any>;
+}>({
+  state: initialState,
+  dispatch: () => null,
+});
+
 export function GlobalProvider({ children }: ComponentsProps) {
-  const [InputState, dispatch] = useReducer(inputReducer, initialState);
+  const [state, dispatch] = useReducer(inputReducer, initialState);
 
   return (
-    <GlobalContext.Provider value={{ InputState, dispatch }}>
+    <GlobalContext.Provider value={{ state, dispatch }}>
       {children}
     </GlobalContext.Provider>
   );

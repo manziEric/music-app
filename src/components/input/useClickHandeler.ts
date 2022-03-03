@@ -3,13 +3,15 @@ import { useContext, useState } from 'react';
 import SEND_ERROR from 'context/constants';
 import { GlobalContext } from 'context/Provider';
 
-type HandleButtonClick = (e: any) => void;
+type HandleButtonClick = () => void;
+interface ArrayType {
+  value: boolean;
+}
 
-let array: any = [];
+let array: ArrayType[] = [];
+
 function useClickHandeler() {
-  const [map] = useState<[] | any>(new Array(3).fill(false));
   const [checked, setChecked] = useState<boolean>(false);
-
   const { dispatch } = useContext(GlobalContext);
 
   const handleButtonClick: HandleButtonClick = () => {
@@ -21,7 +23,7 @@ function useClickHandeler() {
         payload: { errorMessage: false },
       });
     }
-    const count = array.filter((s: any) => s.value).length;
+    const count = array.filter((s: ArrayType) => s.value).length;
     if (count === 1 && array.length === 2) {
       if (checked === true) {
         array = [];
@@ -51,11 +53,11 @@ function useClickHandeler() {
     }
   };
 
-  const handleKeyPress: HandleButtonClick = (e) => {
-    handleButtonClick(e);
+  const handleKeyPress: HandleButtonClick = () => {
+    handleButtonClick();
   };
 
-  return [handleButtonClick, handleKeyPress, map];
+  return [handleButtonClick, handleKeyPress];
 }
 
 export default useClickHandeler;

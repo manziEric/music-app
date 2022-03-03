@@ -3,7 +3,7 @@ interface ComponentsProps {
   altText: string;
 }
 
-function Logo({ logo, altText }: ComponentsProps) {
+function Logo({ logo, altText }: ComponentsProps): JSX.Element {
   return <img src={logo} alt={altText} />;
 }
 

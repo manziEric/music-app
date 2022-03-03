@@ -1,9 +1,6 @@
-import { ReactNode } from 'react';
+import { ComponentsProps } from 'utils/types';
 
-interface ComponentsProps {
-  children: ReactNode;
-}
-function ErrorMessage({ children }: ComponentsProps) {
+function ErrorMessage({ children }: ComponentsProps): JSX.Element {
   return (
     <div
       className="col-span-4 m-2 pl-4 p-2 bg-red-100 rounded flex"

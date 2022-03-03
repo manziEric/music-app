@@ -3,7 +3,7 @@ interface ComponentProps {
   text: string;
 }
 
-function Text({ title, text }: ComponentProps) {
+function Text({ title, text }: ComponentProps): JSX.Element {
   return (
     <div className="col-span-1 p-1" data-testid="text">
       <h2 className="font-bold">{title}</h2>

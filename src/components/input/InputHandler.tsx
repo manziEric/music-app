@@ -1,10 +1,7 @@
-import { createContext, ReactNode } from 'react';
+import { createContext } from 'react';
+import { ComponentsProps } from 'utils/types';
 
-export const InputHandlerContext = createContext<any>({});
-
-interface ComponentsProps {
-  children: ReactNode;
-}
+export const InputHandlerContext = createContext<any | null>(null);
 
 function InputHandler({ children }: ComponentsProps): JSX.Element {
   return (
