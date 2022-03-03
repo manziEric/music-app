@@ -3,7 +3,7 @@ import Sidebar from 'components/sidebar/Sidebar';
 
 describe('renders Sidebar container', () => {
   it('render Sidebar container', () => {
-    const { getByTestId } = render(<Sidebar />);
+    const { getByTestId } = render(<Sidebar>Test Text</Sidebar>);
     expect(getByTestId('sidebar')).toBeInTheDocument();
   });
 });

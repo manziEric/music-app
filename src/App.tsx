@@ -34,7 +34,7 @@ function App() {
                 <Input id={id} name={`button${id}`} />
               </ButtonContainer>
             ))}
-            {context.InputState?.errorMessage ? (
+            {context.state?.errorMessage ? (
               <ErrorMessage>
                 <Logo logo={errorIcon} altText="error logo" />
                 <p className="text-red-500 ml-4">
