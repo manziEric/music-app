@@ -18,7 +18,7 @@ function useClickHandeler() {
     if (checked === false) {
       return dispatch({
         type: SEND_ERROR,
-        payload: { error: false },
+        payload: { errorMessage: false },
       });
     }
     const count = array.filter((s: any) => s.value).length;
@@ -27,7 +27,7 @@ function useClickHandeler() {
         array = [];
         return dispatch({
           type: SEND_ERROR,
-          payload: { error: true },
+          payload: { errorMessage: true },
         });
       }
     }
@@ -36,7 +36,7 @@ function useClickHandeler() {
         array = [];
         return dispatch({
           type: SEND_ERROR,
-          payload: { error: true },
+          payload: { errorMessage: true },
         });
       }
     }
@@ -45,7 +45,7 @@ function useClickHandeler() {
         array = [];
         return dispatch({
           type: SEND_ERROR,
-          payload: { error: true },
+          payload: { errorMessage: true },
         });
       }
     }

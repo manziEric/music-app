@@ -9,7 +9,7 @@ interface ComponentsProps {
 export const GlobalContext = createContext<any>({});
 
 const initialState = {
-  error: true,
+  errorMessage: true,
 };
 
 export function GlobalProvider({ children }: ComponentsProps) {

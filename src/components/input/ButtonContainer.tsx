@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import useClickHandeler from 'components/Input/useClickHandeler';
+import useClickHandeler from 'components/input/useClickHandeler';
 
 interface ComponentsProps {
   children: ReactNode;
@@ -15,9 +15,10 @@ function ButtonContainer({ id, children }: ComponentsProps): JSX.Element {
       onKeyPress={handleKeyPress}
       role="button"
       tabIndex={0}
+      data-testid="buttonContainer"
     >
       <label
-        className="m-2 border h-36 border-stone-400 rounded-md grid place-items-center cursor-pointer"
+        className="m-2 border hover:bg-blue-50 hover:border-blue-500 h-36 border-stone-400 rounded-md grid place-items-center cursor-pointer"
         htmlFor={id.toString()}
       >
         {children}
