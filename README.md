@@ -2,9 +2,7 @@ This is a project for creating a music component app
 
 ## Getting Started
 
-## `Clone the repository`
-
-clone the repository to your machine.
+## `Clone the repository to your machine`
 
 Open a terminal and run the following git command:
 
